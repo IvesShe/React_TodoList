@@ -1,8 +1,12 @@
 # React TodoList
 
-React TodoList 組件練習
+Github展示
 
-# todoList思路分析
+https://ivesshe.github.io/React_TodoList/
+
+![image](./images/20210227110434.png)
+
+# TodoList思路分析
 
 1. 拆分組件、實現靜態組件，注意className、Style的寫法
 2. 動態初始化列表，如何確定將數據放在哪個組件的state中?
@@ -114,6 +118,77 @@ static propTypes={
 # 代碼結構
 
 ![image](./images/20210226234320.png)
+
+# 打包
+
+```bash
+npm run start
+```
+
+生成build檔案，並有說明可以安裝serve，檢視打包的狀態
+
+![image](./images/20210227101745.png)
+
+
+# 安裝serve
+
+```bash
+npm install -g serve
+```
+
+![image](./images/20210227102252.png)
+
+運行檢視打包好的build
+
+```bash
+serve -s build
+```
+
+![image](./images/20210227102512.png)
+
+檢視，右邊的react也變成藍色的發行版本了
+
+![image](./images/20210227102442.png)
+
+# Github上傳
+
+與cocos creator不一樣，需要一些步驟，所以記錄一下
+
+## 資料夾結構需改成以工程項目為主
+
+![image](./images/20210227110742.png)
+
+## 修改package.json
+
+```json
+"homepage": "https://ivesshe.github.io/React_TodoList/",
+
+
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build",
+```
+
+![image](./images/20210227110050.png)
+## 安裝gh-pages
+
+```bash
+npm install --save gh-pages
+```
+
+![image](./images/20210227105317.png)
+
+## 運行
+
+```bash
+npm run deploy
+```
+
+![image](./images/20210227110609.png)
+
+成功了
+
+![image](./images/20210227110434.png)
+
 
 # 源代碼
 
